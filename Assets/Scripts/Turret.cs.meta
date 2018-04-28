@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: a2f61c061bae8184cb4fff23d7b0a982
+timeCreated: 1524290186
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - partToRotate: {instanceID: 0}
+  - bulletPrefab: {fileID: 1065648342643062, guid: be17f1e8f4d909a438f0bedb6c91e001,
+      type: 2}
+  - firePoint: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
