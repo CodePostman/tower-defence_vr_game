@@ -9,6 +9,9 @@ TagManager:
   - Platform
   - Base
   - SpawnManager
+  - UI
+  - Ghost
+  - Turret
   layers:
   - Default
   - TransparentFX
