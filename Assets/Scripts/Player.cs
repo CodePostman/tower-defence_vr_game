@@ -5,26 +5,21 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
-    public float rayLength = 100;
+    public float rayLength = 100.0f;
 
     public Transform playerHead;
 
     public Material newMat;
 
-    public Text coinsCountText;
-
-    public int coins = 6;
-
-    void Start()
-    {
-        
-    }
+    public int coins = 15;
+ 
+    public BuildManager buildManager;
+    public Transform currentPlatform;
 
     void Update()
     {
         Raycast();
 
-        coinsCountText.text = "Coins: " + coins.ToString();
     }
 
     private void Raycast()
@@ -36,16 +31,20 @@ public class Player : MonoBehaviour {
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.gameObject.CompareTag("Coin") && Input.GetMouseButtonDown(0))
+            if (hit.collider.tag == "Coin" && Input.GetMouseButtonDown(0))
             {
                 coins++;
+
                 Destroy(hit.collider.gameObject);                
             }
 
-            if (hit.collider.gameObject.CompareTag("Platform"))
+            if (hit.collider.gameObject.GetComponent<Platform>() && Input.GetMouseButtonDown(0))
             {
-                hit.collider.gameObject.GetComponent<Renderer>().materials[0] = newMat;
-                return;
+                if (coins >= 5)
+                {
+                    buildManager.InstantiateTurret(hit.collider.gameObject.transform);
+                    Destroy(hit.collider.gameObject);
+                }
             }
         }
     }

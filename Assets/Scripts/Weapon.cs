@@ -11,6 +11,7 @@ public class Weapon
     public AudioSource shootAudio;
     public LineRenderer projectileLineRenderer;
 
+
     public void Init()
     {
         projectileLineRenderer.positionCount = 2;
@@ -24,6 +25,7 @@ public class Weapon
 
         targetGo.GetComponent<Enemy>().TakeDamage();
         shootAudio.Play();
+
     }
 
     public void ClearShootTrace()

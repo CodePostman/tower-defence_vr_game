@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public Wave[] Waves; // class to hold information per wave
+    public Wave[] Waves; 
     public Transform SpawnPoint;
     public float TimeBetweenEnemies = 2.0f;
     public float TimeBetweenWaves = 4.0f;
 
     private int _totalEnemiesInCurrentWave;
-    private int _enemiesInWaveLeft;
     private int _spawnedEnemies;
+    private int _enemiesInWaveLeft;
 
     private int _currentWave;
+    public int currentWave
+    {
+        get { return _currentWave; }
+        set { currentWave = value; }
+    }  
+
     private int _totalWaves;
 
     void Start()
     {
-        _currentWave = -1; // avoid off by 1
-        _totalWaves = Waves.Length - 1; // adjust, because we're using 0 index
+        _currentWave = -1; 
+        _totalWaves = Waves.Length - 1; 
 
         StartNextWave();
     }

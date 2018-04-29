@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetBase: {fileID: 1862786848717618, guid: d3753fe872e207146837d7a9cdbe3a7c, type: 2}
-  maxHealth: 100
-  health: 100
+  maxHealth: 50
+  health: 50
   healthBar: {fileID: 114092740493526010}
   destroyedTargetPrefab: {fileID: 1318089700127162, guid: aa1e2cda2558c374a8dcc92a30894192,
     type: 2}

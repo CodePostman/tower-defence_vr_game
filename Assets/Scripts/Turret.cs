@@ -29,7 +29,7 @@ public class Turret : MonoBehaviour {
 
     void Start () {
 
-        InvokeRepeating("UpdateTarget", 0.0f, 0.5f);
+        InvokeRepeating("UpdateTarget", 0.0f, 0.2f);
 
         weapon.Init();
 
@@ -83,7 +83,7 @@ public class Turret : MonoBehaviour {
         Ray ray = new Ray(firePoint.position, firePoint.forward);
         RaycastHit hit;
 
-        //Debug.DrawRay(firePoint.position, firePoint.forward * rayLength, Color.white, 1.0f);
+        Debug.DrawRay(firePoint.position, firePoint.forward * rayLength, Color.white, 1.0f);
 
         if (Physics.Raycast(ray, out hit))
         {
