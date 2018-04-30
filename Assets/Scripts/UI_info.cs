@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class UI_info : MonoBehaviour {
 
     public int killedEnemies = 0;
-    public int baseLives = 5;
 
     public Player player;
     public Enemy enemy;
     public SpawnManager spawnManager;
+    public BaseTrigger baseTrigger;
     public BuildManager buildManager;
 
     public Text wavesCountText;
@@ -24,7 +24,7 @@ public class UI_info : MonoBehaviour {
         wavesCountText.text = "Wave: " + (spawnManager.currentWave + 1).ToString(); 
         killedEnemiesCountText.text = "Killed: " + killedEnemies.ToString();
         coinsCountText.text = "Coins: " + player.coins.ToString();
-        livesCountText.text = "Lives: " + baseLives.ToString();
+        livesCountText.text = "Lives: " + baseTrigger.baseLives.ToString();
         turretsCountText.text = "Turrets: " + buildManager.turretsCount.ToString() + "/5";
     }
 }

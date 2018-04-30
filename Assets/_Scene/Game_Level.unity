@@ -139,8 +139,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 21665549}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -39.45, y: 2.05, z: -68.8}
-  m_LocalScale: {x: 9.868235, y: 4.9730043, z: 9.207531}
+  m_LocalPosition: {x: -39.6, y: 2.05, z: -66.5}
+  m_LocalScale: {x: 14.534327, y: 7.3244376, z: 13.561216}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -209,6 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa07807abe966f4c9831bbb1f251903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 114085789315534048, guid: 33e250a6d056d9d40a0057302a34bcb7, type: 2}
+  baseLives: 5
 --- !u!1001 &68837915
 Prefab:
   m_ObjectHideFlags: 0
@@ -740,7 +742,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6f16aa89e8a23d43b0319c113f5824c, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: f6f16aa89e8a23d43b0319c113f5824c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2313,7 +2315,7 @@ Transform:
   - {fileID: 676129020}
   - {fileID: 211816180}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &850887437
 GameObject:
@@ -4166,10 +4168,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killedEnemies: 0
-  baseLives: 5
   player: {fileID: 88336056}
   enemy: {fileID: 114085789315534048, guid: 33e250a6d056d9d40a0057302a34bcb7, type: 2}
   spawnManager: {fileID: 577253031}
+  baseTrigger: {fileID: 21665554}
   buildManager: {fileID: 898103722}
   wavesCountText: {fileID: 2092716450}
   killedEnemiesCountText: {fileID: 1100964445}
@@ -5032,7 +5034,7 @@ Transform:
   - {fileID: 1713614935}
   - {fileID: 372484554}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1993962712 stripped
 Transform:
@@ -5190,7 +5192,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4699436152404882, guid: d3753fe872e207146837d7a9cdbe3a7c, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1862786848717618, guid: d3753fe872e207146837d7a9cdbe3a7c, type: 2}
       propertyPath: m_Name

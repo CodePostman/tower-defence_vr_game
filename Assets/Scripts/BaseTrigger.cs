@@ -4,20 +4,31 @@ using UnityEngine;
 
 public class BaseTrigger : MonoBehaviour {
 
-    private UI_info uiInfo;
-    private Enemy enemy;
+    public Enemy enemy;
+    public int baseLives = 5;
+    private SpawnManager _spawnManager;
 
-    void Start () {
-        uiInfo = GameObject.FindGameObjectWithTag("UI").GetComponent<UI_info>();
-        enemy = GetComponent<Enemy>();
+
+    private void Start()
+    {
+        _spawnManager = GameObject.FindGameObjectWithTag("SpawnManager").GetComponent<SpawnManager>();
     }
-	
-	// Update is called once per frame
-	void OnTriggerEnter (Collider other) {
-        if (other == enemy)
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            Destroy(other);
-            uiInfo.baseLives--;
+            StartCoroutine(EnemyEntersTheBase());
+            Destroy(other.gameObject, 3);
         }
+       
     }
+
+    IEnumerator EnemyEntersTheBase()
+    {
+        yield return new WaitForSeconds(2);
+        baseLives--;
+        _spawnManager.EnemyDefeated();
+    }
+
 }

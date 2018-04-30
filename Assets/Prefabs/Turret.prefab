@@ -412,9 +412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f61c061bae8184cb4fff23d7b0a982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 30
+  range: 40
   fireRate: 1
-  rayLength: 30
+  rayLength: 40
   partToRotate: {fileID: 4493198601793034}
   weapon:
     fireRate: 0.1
