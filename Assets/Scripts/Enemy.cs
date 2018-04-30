@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour {
 
     private UI_info uiInfo;
 
+
+
     [Header("Coins")]
 
     public GameObject destroyedTargetPrefab;

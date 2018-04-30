@@ -11,6 +11,7 @@ public class SpawnManager : MonoBehaviour
 
     private int _totalEnemiesInCurrentWave;
     private int _spawnedEnemies;
+
     private int _enemiesInWaveLeft;
 
     private int _currentWave;
@@ -21,6 +22,12 @@ public class SpawnManager : MonoBehaviour
     }  
 
     private int _totalWaves;
+    public int totalWaves
+    {
+        get { return _totalWaves; }
+        set { totalWaves = value; }
+    }
+
 
     void Start()
     {
@@ -56,13 +63,12 @@ public class SpawnManager : MonoBehaviour
             _spawnedEnemies++;
             _enemiesInWaveLeft++;
 
-            //int spawnPointIndex = Random.Range(0, SpawnPoints.Length);
-
-            // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
             Instantiate(enemy, SpawnPoint.position, SpawnPoint.rotation);
             yield return new WaitForSeconds(TimeBetweenEnemies);
+           
         }
         yield return null;
+
     }
 
     // called by an enemy when they're defeated

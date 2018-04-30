@@ -14,12 +14,10 @@ public class Player : MonoBehaviour {
     public int coins = 15;
  
     public BuildManager buildManager;
-    public Transform currentPlatform;
 
     void Update()
     {
         Raycast();
-
     }
 
     private void Raycast()
